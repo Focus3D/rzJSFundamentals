@@ -7,14 +7,16 @@ console.log("Array Length: " + numbersArray.length);
 
 
 // (.pop())
-// Get LAST item AND remove it from array
-console.log("Last Item (Pop): " + numbersArray.pop());
+// Remove the LAST item AND store it as a variable
+var last_item = numbersArray.pop();
+console.log("This was the last item: " + last_item);
 console.log("Array After Pop: " + numbersArray);
 
 
 // (.push())
 // ADD an item to the END of the array
-numbersArray.push(7);
+var new_item = 7;
+numbersArray.push(new_item);
 console.log("Array After Push: " + numbersArray);
 
 
