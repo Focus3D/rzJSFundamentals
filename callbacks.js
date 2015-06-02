@@ -1,13 +1,14 @@
 // REWRITING NATIVE JAVASCRIPT FUNCTIONS FROM SCRATCH
 // FOR PRACTICE WITH HIGHER ORDER FUNCTIONS
 
-var myArray = [1,2,3,4,5];
+var myArray = [1, 2, 3, 4, 5];
 
 // array.forEach()
 function each(array, callback) {
     if (Array.isArray(array)) {
-        for (var i = 0; i < array.length; i++) {
-            callback(array[i],i);
+        var i;
+        for (i = 0; i < array.length; i += 1) {
+            callback(array[i], i);
         }
     }
 }
@@ -15,8 +16,8 @@ function each(array, callback) {
 // array.map() using the above each() function
 function arrayMap(array, callback) {
     var tempArray = [];
-    each(array, function(item,index) {
-        tempArray.push(callback(item,index));
+    each(array, function(item, index) {
+        tempArray.push(callback(item, index));
     });
     return tempArray;
 }
@@ -52,13 +53,14 @@ function arrayZip(array1, array2 /*,... */) {
     });
 }
 
-var secondArray = [6,7,8,9,10];
+var secondArray = [6, 7, 8, 9, 10];
 
 var newArray = arrayZip(myArray, secondArray);
 
 function arrayIndexOf(array, item) {
     // indexOf() stops once the item is found
-    for (var i=0; i<array.length; i++) {
+    var i;
+    for (i = 0; i < array.length; i += 1) {
         if (array[i] === item) {
             return i;
         }

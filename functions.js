@@ -6,7 +6,7 @@ function declaredFunction() {
 
 // EXPRESS a function
 var expressedFunction = function() {
-  // do something  
+  // do something
 };
 
 
@@ -16,7 +16,7 @@ var expressedFunction = function() {
 
 // CLOSURES
 function addSomething(a) {
-    return function (b) {
+    return function(b) {
         return a + b;
     };
 }
@@ -31,8 +31,9 @@ var calculator = {
     }
 };
 
-var sum = function (num1, num2) {
+var sum = function(num1, num2) {
     return num1 + num2;
 };
 
-var sumOfFiveAndTwo = calculator.calculate(5,2,sum);
+var sumOfFiveAndTwo = calculator.calculate(5, 2, sum);
+console.log(sumOfFiveAndTwo);

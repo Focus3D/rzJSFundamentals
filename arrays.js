@@ -1,4 +1,4 @@
-var numbersArray = [0,1,2,3,4,5,6,7];
+var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7];
 console.log("Array: " + numbersArray);
 
 // (.length())
@@ -8,15 +8,15 @@ console.log("Array Length: " + numbersArray.length);
 
 // (.pop())
 // Remove the LAST item AND store it as a variable
-var last_item = numbersArray.pop();
-console.log("This was the last item: " + last_item);
+var lastItem = numbersArray.pop();
+console.log("This was the last item: " + lastItem);
 console.log("Array After Pop: " + numbersArray);
 
 
 // (.push())
 // ADD an item to the END of the array
-var new_item = 7;
-numbersArray.push(new_item);
+var newItem = 7;
+numbersArray.push(newItem);
 console.log("Array After Push: " + numbersArray);
 
 
@@ -36,17 +36,17 @@ console.log("Array After Shift: " + numbersArray);
 // Sort the items of the array (no rules give least to greatest)
 console.log("Sorted array no rules: " + numbersArray.sort());
 
-function greatestToLeast(a,b) {
+function greatestToLeast(a, b) {
     return b - a;
 }
-console.log("Sorted greatest to least: "+numbersArray.sort(greatestToLeast));
+console.log("Sorted greatest to least: " + numbersArray.sort(greatestToLeast));
 
 
 // (.splice())
 // REMOVE item(s) from array, optionally add.
 // splice accepts index,amount,newItem
 // returns an array of removed items
-console.log("Items Removed With Splice: " + numbersArray.splice(2,3));
+console.log("Items Removed With Splice: " + numbersArray.splice(2, 3));
 console.log("Array After Splice: " + numbersArray);
 
 
@@ -58,13 +58,13 @@ console.log("Array after unshift: " + numbersArray);
 
 // (.concat())
 // Joins two arrays to create another
-var negativeNumbers = [-1,-2,-3,-4,-5];
+var negativeNumbers = [-1, -2, -3, -4, -5];
 var newArray = numbersArray.concat(negativeNumbers);
 console.log("Combined Arrays: " + newArray);
 
 
 // (.join())
-// Creates a string from an array seporated by a given string
+// Creates a string from an array separated by a given string
 var string = newArray.join(" + ");
 console.log("String from join: " + string);
 
@@ -74,22 +74,22 @@ console.log("String from join: " + string);
 // slice accepts index,index (excluded, included)
 // starts cursor 0 at very beginning (not first item)
 // removes everything between two cursors
-var sliceArray = newArray.slice(3,7);
+var sliceArray = newArray.slice(3, 7);
 console.log("New Array From Slice: " + sliceArray);
 
 
 // (.indexOf()) and (.lastIndexOf())
-// FIND and elemenet in an array
-var fruit = ["apples", "oranges", "grapes", "bananas", "apples"];
+// FIND and element in an array
+var fruits = ["apples", "oranges", "grapes", "bananas", "apples"];
 
-var firstAppleIndex = fruit.indexOf("apples");
-var lastAppleIndex = fruit.lastIndexOf("apples");
-var firstMangoIndex = fruit.indexOf("mangos"); // Not found returns -1
+var firstAppleIndex = fruits.indexOf("apples");
+var lastAppleIndex = fruits.lastIndexOf("apples");
+var firstMangoIndex = fruits.indexOf("mangos"); // Not found returns -1
 
 
 // (.forEach())
 // ITERATE over the array
-var numbersArray = [1,2,3,4,5];
+var numbersArray = [1, 2, 3, 4, 5];
 numbersArray.forEach(function(item) {
     // console.log(item);
 });
@@ -130,7 +130,7 @@ var companiesThatStartWithG = companies.filter(startsWithG);
 
 // (.map())
 // CREATE NEW array from elements with function rules
-var oneThroughFive = [1,2,3,4,5];
+var oneThroughFive = [1, 2, 3, 4, 5];
 
 function multiplyByTwo(item) {
     return item * 2;
@@ -141,9 +141,9 @@ var twoFourSixEightTen = oneThroughFive.map(multiplyByTwo);
 
 // (.reduce())
 // CREATE NEW VALUE from elements with function rules
-var tensToThousand = [1,10,100,1000];
+var tensToThousand = [1, 10, 100, 1000];
 
-function addTheNumbers(previousValue,currentValue) {
+function addTheNumbers(previousValue, currentValue) {
     return previousValue + currentValue;
 }
 
