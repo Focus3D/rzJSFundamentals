@@ -10,6 +10,9 @@ var randomNumber = Math.random();
 var zeroOrOne = Math.round(Math.random());
 var zeroToNine = Math.floor(Math.random()*10);
 var oneToTen = Math.ceil(Math.random()*10);
+var minusOne = Math.cos(Math.PI);
+var one = Math.sin(Math.PI/2);
+var piDividedBy4 = Math.atan2(1, 1);
 
 // Put any of the above variables into the
 // console.log function to see its usefulness.
