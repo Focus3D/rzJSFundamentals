@@ -32,7 +32,7 @@ console.log("\"The\" to \"why\": " + str.replace(/the/gi, 'why'));
 // Returns substring string by REMOVING edges of full string
 // Replacement for substr and substring bc it accepts backwards indexes
 // Accepts two index arguments
-console.log("Sliced String: " + str.slice(4,-4));
+console.log("Sliced String: " + str.slice(4, -4));
 
 
 // (.split())

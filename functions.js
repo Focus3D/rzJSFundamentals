@@ -5,8 +5,8 @@ function declaredFunction() {
 
 
 // EXPRESS a function
-var expressedFunction = function() {
-  // do something  
+var expressedFunction = function () {
+  // do something
 };
 
 
@@ -26,7 +26,7 @@ var fivePlusTen = addFive(10);
 
 // CALLBACKS || HIGHER-ORDER FUNCTIONS
 var calculator = {
-    calculate: function(num1, num2, callback) {
+    calculate: function (num1, num2, callback) {
         return callback(num1, num2);
     }
 };
@@ -35,4 +35,5 @@ var sum = function (num1, num2) {
     return num1 + num2;
 };
 
-var sumOfFiveAndTwo = calculator.calculate(5,2,sum);
+var sumOfFiveAndTwo = calculator.calculate(5, 2, sum);
+console.log(sumOfFiveAndTwo);

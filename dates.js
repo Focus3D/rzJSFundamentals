@@ -1,5 +1,5 @@
 var date = new Date();
-var dateWasBorn = new Date(1991,3,29,4,12,46);
+var dateWasBorn = new Date(1991, 3, 29, 4, 12, 46);
 var yearWasBorn = dateWasBorn.getFullYear();
 var monthWasBorn = dateWasBorn.getMonth(); // 0 to 11
 var dayOfMonthWasBorn = dateWasBorn.getDate();
