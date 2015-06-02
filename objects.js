@@ -3,7 +3,7 @@ var jane = {
     firstName: "Jane",
     lastName: "Smith",
     age: 24,
-    getFullName: function () {
+    getFullName: function() {
         return this.firstName + " " + this.lastName;
     }
 };
@@ -17,7 +17,7 @@ function Person(firstName, lastName, age) {
 
 // Methods should go into prototypes, not the constructor.
 // Saves memory.
-Person.prototype.getFullName = function () {
+Person.prototype.getFullName = function() {
     return this.firstName + " " + this.lastName;
 };
 

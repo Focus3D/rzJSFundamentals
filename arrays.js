@@ -90,7 +90,7 @@ var firstMangoIndex = fruits.indexOf("mangos"); // Not found returns -1
 // (.forEach())
 // ITERATE over the array
 var numbersArray = [1, 2, 3, 4, 5];
-numbersArray.forEach(function (item) {
+numbersArray.forEach(function(item) {
     // console.log(item);
 });
 

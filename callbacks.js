@@ -16,7 +16,7 @@ function each(array, callback) {
 // array.map() using the above each() function
 function arrayMap(array, callback) {
     var tempArray = [];
-    each(array, function (item, index) {
+    each(array, function(item, index) {
         tempArray.push(callback(item, index));
     });
     return tempArray;
@@ -25,7 +25,7 @@ function arrayMap(array, callback) {
 // array.filter() using the above each() function
 function arrayFilter(array, callback) {
     var tempArray = [];
-    each(array, function (item) {
+    each(array, function(item) {
         if (callback(item)) {
             tempArray.push(item);
         }
@@ -36,7 +36,7 @@ function arrayFilter(array, callback) {
 // array.reduce()/.concat() using the above each() function
 function arrayReduce(array, callback) {
     var finalValue = array[0];
-    each(array.slice(1), function (item) {
+    each(array.slice(1), function(item) {
         finalValue = callback(finalValue, item);
     });
     return finalValue;
@@ -46,8 +46,8 @@ function arrayReduce(array, callback) {
 // given arrays of equal size
 function arrayZip(array1, array2 /*,... */) {
     var params = Array.prototype.slice.call(arguments);
-    return arrayMap(params[0], function (a, i) {
-        return arrayMap(params, function (item) {
+    return arrayMap(params[0], function(a, i) {
+        return arrayMap(params, function(item) {
             return item[i];
         });
     });
