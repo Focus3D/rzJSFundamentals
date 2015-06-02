@@ -148,3 +148,5 @@ function addTheNumbers(previousValue,currentValue) {
 }
 
 var number = tensToThousand.reduce(addTheNumbers);
+// 2nd optional parameter: initial value to reduce
+var sum = tensToThousand.reduce(addTheNumbers, 0);

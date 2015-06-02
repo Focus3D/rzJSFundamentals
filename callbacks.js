@@ -12,7 +12,7 @@ function each(array, callback) {
     }
 }
 
-// array.map() using the above .each() function
+// array.map() using the above each() function
 function arrayMap(array, callback) {
     var tempArray = [];
     each(array, function(item,index) {
@@ -21,7 +21,7 @@ function arrayMap(array, callback) {
     return tempArray;
 }
 
-// array.filter() using the above .each() function
+// array.filter() using the above each() function
 function arrayFilter(array, callback) {
     var tempArray = [];
     each(array, function(item) {
@@ -32,48 +32,38 @@ function arrayFilter(array, callback) {
     return tempArray;
 }
 
-// array.reduce()/.concat() using the above .each() function
+// array.reduce()/.concat() using the above each() function
 function arrayReduce(array, callback) {
-    var finalValue = array.shift();
-
-    each(array, function(item) {
+    var finalValue = array[0];
+    each(array.slice(1), function(item) {
         finalValue = callback(finalValue, item);
     });
-    
     return finalValue;
 }
 
-// python's .zip() functionality, using the above .each() function
+// python's .zip() functionality, using the above arrayMap() function
 // given arrays of equal size
-function arrayZip(array1,array2) {
-    var outterArray = [];
-    var innerArray = [];
+function arrayZip(array1, array2 /*,... */) {
     var params = Array.prototype.slice.call(arguments);
-
-    each(params[0], function(a,i) {
-        each(params, function(item, index) {
-            innerArray.push(params[index][i]);
+    return arrayMap(params[0], function(a, i) {
+        return arrayMap(params, function(item) {
+            return item[i];
         });
-        outterArray.push(innerArray);
-        innerArray = [];
     });
-    
-    return outterArray;
 }
 
 var secondArray = [6,7,8,9,10];
 
-var newArray = arrayZip(myArray,secondArray);
+var newArray = arrayZip(myArray, secondArray);
 
-// indexOf() using the above .each() function
-function arrayIndexOf(haystack, needle) {
-    var found = -1;
-    
-    each(haystack, function(item,index) {
-        if (item === needle && found === -1) {found = index;}
-    });
-    
-    return found;
+function arrayIndexOf(array, item) {
+    // indexOf() stops once the item is found
+    for (var i=0; i<array.length; i++) {
+        if (array[i] === item) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 var findFour = arrayIndexOf(myArray, 4);

@@ -22,4 +22,6 @@ Person.prototype.getFullName = function() {
 };
 
 var joe = new Person("Joe","Smith",24);
+
+console.log(jane.getFullName());
 console.log(joe.getFullName());
