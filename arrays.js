@@ -79,7 +79,7 @@ console.log("New Array From Slice: " + sliceArray);
 
 
 // (.indexOf()) and (.lastIndexOf())
-// FIND and element in an array
+// FIND an element in an array
 var fruits = ["apples", "oranges", "grapes", "bananas", "apples"];
 
 var firstAppleIndex = fruits.indexOf("apples");
